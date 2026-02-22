@@ -1,0 +1,14 @@
+# Dataset - too large for GitHub
+dataset_new/
+dataset_binary/
+
+# Model file
+*.h5
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code
+.vscode/
