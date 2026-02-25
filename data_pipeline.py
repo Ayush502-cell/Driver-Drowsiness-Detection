@@ -1,8 +1,7 @@
-# ============================================================
 #  FILE: data_pipeline.py
 #  TEAMMATE 1 — Data Pipeline
 #  Purpose: Load, augment and prepare data for model training
-# ============================================================
+#___________________________________________________________#
 
 import os
 import numpy as np
