@@ -1,74 +1,81 @@
-**Driver Drowsiness Detection System**
+🧠 Driver Drowsiness Detection System
 
-This project is an AI-based system that detects driver drowsiness in real time using computer vision and deep learning. It monitors eye behavior through a webcam and gives an alert when signs of drowsiness are detected.
+An AI-powered real-time system that detects driver drowsiness using computer vision and deep learning. It monitors eye states through a webcam and triggers alerts when signs of fatigue are detected, helping reduce road accidents caused by driver sleepiness.
 
-**Project Overview**
+🚀 Project Overview
 
-Driver fatigue is a major cause of road accidents.
-This system uses a trained CNN model to classify eye states (open/closed) and runs a real-time detection system using webcam input.
+Driver fatigue is one of the leading causes of road accidents worldwide.
+This system uses a Convolutional Neural Network (CNN) to classify eye states as open or closed, and performs real-time detection using webcam input.
 
-The workflow includes data preprocessing, model training, evaluation, and real-time deployment.
+The project covers the complete ML pipeline:
 
-**System Breakdown**
-**Data Pipeline**
+Data preprocessing
+Model training
+Evaluation
+Real-time deployment
+⚙️ System Architecture
+Data Collection & Preprocessing
+        ↓
+CNN Model Training
+        ↓
+Model Evaluation
+        ↓
+Saved Model (.h5)
+        ↓
+Real-Time Webcam Detection
+📊 Data Pipeline
 
-**Contributor: Himanshu Bish**t
+👨‍💻 Contributor: Himanshu Bisht
 
 Dataset cleaning and preprocessing (clean_dataset.py)
-Image resizing, normalization, and augmentation using ImageDataGenerator
-Preparing data for training
-Checking class distribution and sample images
-Model Training and Evaluation
-**
-Contributor: Ayush Dobhal
-**
-CNN model design (model.py)
-Model training on eye state dataset
-Performance evaluation using accuracy, loss graphs
-Confusion matrix and classification report
+Image resizing, normalization, and augmentation
+Data augmentation using ImageDataGenerator
+Class distribution analysis
+Sample image visualization
+🧠 Model Training & Evaluation
+
+👨‍💻 Contributor: Ayush Dobhal
+
+CNN architecture design (model.py)
+Training on eye-state dataset (open/closed)
+Model performance evaluation:
+Accuracy & loss curves
+Confusion matrix
+Classification report
 Comparison with MobileNetV2
-Real-Time Detection
+🎥 Real-Time Detection System
 
-**Contributor: Neeraj Bisht**
+👨‍💻 Contributor: Neeraj Bisht
 
-Loading trained model for inference
+Loading trained CNN model for inference
 Real-time webcam processing using OpenCV (realtime.py)
-Face and eye-based prediction in live video
-Displaying drowsy/alert status on screen
-Alert sound trigger when drowsiness is detected
-
-**Technologies Used**
-Python
-OpenCV
-TensorFlow / Keras
+Face and eye detection in live video stream
+On-screen status display:
+🟢 Alert
+🔴 Drowsy
+Audio alert trigger when drowsiness is detected
+🧪 Technologies Used
+Python 🐍
+OpenCV 👁️
+TensorFlow / Keras 🤖
 NumPy
-Matplotlib
+Matplotlib 📊
 scikit-learn
 imutils
-
-**Workflow**
-
-Data Preprocessing
-↓
-Model Training
-↓
-Model Evaluation
-↓
-Saved Model
-↓
-Real-Time Detection using Webcam
- 
-**Key Features** 
-Real-time detection using webcam
-CNN-based eye state classification
-Live bounding box and status display
-Alert system for drowsiness detection
-Complete ML pipeline from data to deployment
-
-**Contributions**
-
-The project was developed in a team, with each member working on a separate module:
-
-Model design and training
-Data preprocessing pipeline
-Real-time detection system
+⭐ Key Features
+🎥 Real-time drowsiness detection using webcam
+🧠 CNN-based eye state classification
+📦 End-to-end ML pipeline (data → model → deployment)
+📊 Model evaluation with visual performance metrics
+🔊 Audio alert system for safety warnings
+🖥️ Live bounding box + status display
+👥 Contributors
+Himanshu Bisht → Data preprocessing pipeline
+Ayush Dobhal → Model design & training
+Neeraj Bisht → Real-time detection system
+📌 Workflow Summary
+Data preprocessing & augmentation
+CNN model training
+Model evaluation
+Saving trained model
+Real-time inference using webcam
