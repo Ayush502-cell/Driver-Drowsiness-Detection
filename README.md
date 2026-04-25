@@ -1,68 +1,74 @@
-# Driver Drowsiness Detection System
+**Driver Drowsiness Detection System**
 
-This project is an AI-based Driver Drowsiness Detection System
-designed to monitor a driver in real time and detect signs of fatigue using computer vision
-and deep learning. The system analyzes eye behavior through a webcam feed and triggers 
-an alert when drowsiness is detected.
+This project is an AI-based system that detects driver drowsiness in real time using computer vision and deep learning. It monitors eye behavior through a webcam and gives an alert when signs of drowsiness are detected.
 
----
+**Project Overview**
 
-## Project Overview
+Driver fatigue is a major cause of road accidents.
+This system uses a trained CNN model to classify eye states (open/closed) and runs a real-time detection system using webcam input.
 
-Driver fatigue is a major cause of road accidents. 
-This project addresses the problem by using
-a deep learning model combined with real-time computer vision.
-A Shallow Convolutional Neural Network (CNN) is trained to classify eye states, and the trained model is then
-deployed in a real-time application using a webcam.
+The workflow includes data preprocessing, model training, evaluation, and real-time deployment.
 
----
+**System Breakdown**
+**Data Pipeline**
 
-## System Architecture
+**Contributor: Himanshu Bish**t
 
-The project is divided into three interconnected modules:
+Dataset cleaning and preprocessing (clean_dataset.py)
+Image resizing, normalization, and augmentation using ImageDataGenerator
+Preparing data for training
+Checking class distribution and sample images
+Model Training and Evaluation
+**
+Contributor: Ayush Dobhal
+**
+CNN model design (model.py)
+Model training on eye state dataset
+Performance evaluation using accuracy, loss graphs
+Confusion matrix and classification report
+Comparison with MobileNetV2
+Real-Time Detection
 
-### 🟡 Data Pipeline
-- Dataset cleaning and preprocessing
-- Image resizing, normalization, and augmentation
-- Preparing data generators for model training
-- Verifying class balance and sample visualization
+**Contributor: Neeraj Bisht**
 
-### 🔴 Model Architecture & Evaluation
-- Designing and implementing a Shallow CNN architecture
-- Training the model on preprocessed eye images
-- Plotting accuracy and loss graphs
-- Evaluating performance using confusion matrix and classification report
-- Comparing performance with a pre-trained MobileNetV2 model
+Loading trained model for inference
+Real-time webcam processing using OpenCV (realtime.py)
+Face and eye-based prediction in live video
+Displaying drowsy/alert status on screen
+Alert sound trigger when drowsiness is detected
 
-### 🟢 Real-Time Detection Application
-- Loading the trained model
-- Capturing live video feed using OpenCV
-- Detecting face and eye regions
-- Predicting drowsy/alert state in real time
-- Displaying bounding boxes and status labels
-- Triggering alert sound when drowsiness is detected
+**Technologies Used**
+Python
+OpenCV
+TensorFlow / Keras
+NumPy
+Matplotlib
+scikit-learn
+imutils
 
----
+**Workflow**
 
-## Technology Stack
-
-- Python
-- OpenCV
-- TensorFlow / Keras
-- NumPy
-- imutils
-- Matplotlib
-- scikit-learn
-
----
-
-## Workflow Connection
-
-```text
 Data Preprocessing
-       ↓
-Model Training & Evaluation
-       ↓
-Saved Trained Model (.h5)
-       ↓
-Real-Time Webcam Detection
+↓
+Model Training
+↓
+Model Evaluation
+↓
+Saved Model
+↓
+Real-Time Detection using Webcam
+ 
+**Key Features** 
+Real-time detection using webcam
+CNN-based eye state classification
+Live bounding box and status display
+Alert system for drowsiness detection
+Complete ML pipeline from data to deployment
+
+**Contributions**
+
+The project was developed in a team, with each member working on a separate module:
+
+Model design and training
+Data preprocessing pipeline
+Real-time detection system
